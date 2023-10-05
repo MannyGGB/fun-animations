@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Nabla&display=swap");
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Nabla", cursive;
+  background-color: darkblue;
+  animation: backcolour 10s infinite ease-in-out;
+  margin: 1rem;
+}
+
+h1 {
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  animation: heading 10s infinite;
+  animation-direction: alternate;
+}
+
+@keyframes heading {
+  0%,
+  100% {
+    transform: rotate(0deg);
+    background-color: blue;
+  }
+  50% {
+    transform: rotate(20deg);
+    background-color: darkolivegreen;
+  }
+}
+
+@keyframes backcolour {
+  0%,
+  100% {
+    background-color: darkblue;
+  }
+  50% {
+    background-color: orangered;
+  }
+}
+ul {
+  width: 25%;
+  height: fit-content;
+  list-style: none;
+  background-color: blueviolet;
+  margin: 2rem;
+}
+
+ul:hover {
+  animation: menu 10s;
+  animation-play-state: paused;
+}
+
+@keyframes menu {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
